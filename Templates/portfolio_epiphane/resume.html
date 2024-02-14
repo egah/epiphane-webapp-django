@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="fr"><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Blog - Epiphane Egah</title>
+    {% load static %}
+    <link rel="icon" href="{% static 'Images/favicon.ico'%}" type="image/png">
+    <meta name="description" content="">
+    <link rel="stylesheet" href="{% static 'css/homepage.css' %}">
+    <!--<link rel="shortcut icon" href="#">-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-..." crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    
+
+
+    </head>
+    <body data-spy="scroll" data-target="#header">
+    <nav id="header" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+    <div class="navbar-header">
+    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+    <span class="sr-only">Toggle navigation</span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="{% url 'homepage' %}">
+    <span class="navbar-brand-img"><img src="#" alt=""></span>
+    <span class="navbar-brand-title">Epiphane Egah</span>
+    </a>
+    </div>
+    <div class="navbar-collapse collapse in" aria-expanded="true">
+    <ul class="nav navbar-nav navbar-right">
+    <li class=""><a href="#profil">Profil</a></li>
+    <li class=""><a href="#compétences">Compétences</a></li>
+    <li class="active"><a href="#expériences">Expériences</a></li>
+    <li><a href="#recherche">Projet</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li class="dropdown">
+    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-bars" style="font-size: 1.3em;"></i></a>
+    <ul class="dropdown-menu">
+    
+    <li class=""><a href="/">Accueil</a></li>
+    
+    <li><a href="https://drive.google.com/file/d/1v5ehYLqTTnjG8EgzIuMB4sftzgibG7bt/view?usp=sharing">CV</a></li>
+
+    <li><a href="#">Publications</a></li>
+    
+    
+    </ul>
+    </li>
+    <!--
+    <li class="lang-selector">
+    <a class="current-lang">
+    <img src="/assets/images/fr.png" alt="Français" title="Français">
+    </a>
+    <a href="/en/">
+    <img src="/assets/images/en.png" alt="English" title="English">
+    </a>
+    </li>
+  -->
+    </ul>
+    </div>
+    </div>
+    </nav>
+    <main id="main" class="layout-onepage">
+    <section id="bonjour-je-suis-thomas-robert" class="onepage-block dark large cover-image parallax" style="background-image: url(&quot;../static/Images/cover.jpg&quot;); background-position: 50% 25px;">
+    <div class="container onepage-block-header">
+    <div class="picture">
+      {% load static %}
+    <img src="{% static 'Images/picture.png' %}" alt="">
+    </div>
+    <div class="text">
+    <h2>Bonjour, je suis Epiphane Egah</h2>
+      <div class="content">
+        <p>Fort d’une expérience comme consultant en data science, je suis capable de comprendre des problématiques clients, d’y répondre de façon efficace et de mener des
+          restitutions.</p>
+        <p>Je comprends les besoins de données qu’une entreprise peut avoir
+        </p>
+    </div>
+    </div>
+    </div>
+    </section>
+    <section id="profil" class="onepage-block ">
+    <div class="container">
+    <h2>Mon profil</h2>
+    <div class="content">
+    <div class="row page-content">
+    <div class="feature-box col-sm-6 col-xs-12">
+    <div class="feature-box-1 pull-left color-2"><span><i class="fa fa-code icon-custom-style"></i></span></div>
+    <div class="feature-box-2">
+    <h3>J'aime les statistiques</h3>
+    <p>J'ai une licence en mathématiques appliquées et un master en statistiques et en data science.</p>
+    </div>
+    </div>
+    <div class="feature-box col-sm-6 col-xs-12">
+    <div class="feature-box-1 pull-left color-3"><span><i class="fa fa-cogs icon-custom-style"></i></span></div>
+    <div class="feature-box-2">
+    <h3>J'aime le machine learning et le NLP</h3>
+    <p>J'ai à mon actif plusieurs projets utilisant des méthodes de machine learning et de traitement du langage naturel (NLP).</p>
+    </div>
+    </div>
+    <div class="clearfix"></div>
+    <div class="feature-box col-sm-6 col-xs-12">
+    <div class="feature-box-1 pull-left color-4"><span><i class="fa fa-flask icon-custom-style"></i></span></div>
+    <div class="feature-box-2">
+    <h3>J'aime travailler en équipe</h3>
+    <p>J'apprécie tout particulièrement les échanges d'idées. J'ai déjà effectué plusieurs projets de groupes.</p>
+    </div>
+    </div>
+    <div class="feature-box col-sm-6 col-xs-12">
+    <div class="feature-box-1 pull-left color-5"><span><i class="fa fa-book icon-custom-style"></i></span></div>
+    <div class="feature-box-2">
+    <h3>J'aime apprendre</h3>
+    <p>Je suis régulièrement des MOOC sur Udemy et Datacamp pour développer de nouvelles compétences.</p>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </section>
+
+
+
+    <section id="compétences" class="onepage-block dark cover-image parallax" style="background-image: url(&quot;../static/Images/cover.jpg&quot;); background-position: 50% 11px;">
+      <div class="container">
+      <h2>Mes compétences &amp; hobbies</h2>
+      <div class="content">
+      <div class="service-box col-md-4 col-sm-6 col-xs-12">
+      <div class="service-box-icon"><span><i class="fa fa-cogs icon-custom-style"></i></span></div>
+      <div class="service-box-content">
+      <h3>Machine Learning &amp; Data Science</h3>
+      
+      <ul class="leaders">
+        <li>
+          <span>Analyse de données</span>
+          <span class="rating">
+          <i class="fa fa-circle"></i>
+          <i class="fa fa-circle"></i>
+          <i class="fa fa-circle"></i>
+          </span>
+          </li>
+          <li>
+            <span>Data Visualisation</span>
+            <span class="rating">
+            <i class="fa fa-circle"></i>
+            <i class="fa fa-circle"></i>
+            <i class="fa fa-circle"></i>
+            </span>
+            </li>
+      <li>
+      <span data-placement="bottom" title="" data-original-title="">Deep Learning</span>
+      <span class="rating">
+      <i class="fa fa-circle"></i>
+      <i class="fa fa-circle"></i>
+      <i class="fa fa-circle"></i>
+      </span>
+      </li>
+      <li>
+      <span data-placement="bottom" title=""  data-original-title="">Data Science</span>
+      <span class="rating">
+      <i class="fa fa-circle"></i>
+      <i class="fa fa-circle"></i>
+      <i class="fa fa-circle"></i>
+      </span>
+      </li>
+      <li>
+        <span>Scikit-learn</span>
+        <span class="rating">
+        <i class="fa fa-circle"></i>
+        <i class="fa fa-circle"></i>
+        <i class="fa fa-circle"></i>
+        </span>
+        </li>
+      <li>
+      <span>Keras & TensorFlow</span>
+      <span class="rating">
+      <i class="fa fa-circle"></i>
+      <i class="fa fa-circle"></i>
+      <i class="fa fa-circle-thin"></i>
+      </span>
+      </li>
+ 
+      <li>
+      <span data-placement="bottom" title=""  data-original-title="">Spark</span>
+      <span class="rating">
+      <i class="fa fa-circle"></i>
+      <i class="fa fa-circle"></i>
+      <i class="fa fa-circle-thin"></i>
+      </span>
+      </li>
+      
+      </ul>
+      </div>
+      </div>
+      <div class="service-box col-md-4 col-sm-6 col-xs-12">
+      <div class="service-box-icon"><span><i class="fa fa-code icon-custom-style"></i></span></div>
+      <div class="service-box-content">
+      <h3>Programmation</h3>
+      
+      <ul class="leaders">
+  
+      <li>
+      <span>Python</span>
+      <span class="rating">
+      <i class="fa fa-circle"></i>
+      <i class="fa fa-circle"></i>
+      <i class="fa fa-circle"></i>
+      </span>
+      </li>
+      <li>
+        <span>SQL</span>
+        <span class="rating">
+        <i class="fa fa-circle"></i>
+        <i class="fa fa-circle"></i>
+        <i class="fa fa-circle"></i>
+        </span>
+        </li>
+      <li>
+      <span>R & SAS</span>
+      <span class="rating">
+      <i class="fa fa-circle"></i>
+      <i class="fa fa-circle"></i>
+      <i class="fa fa-circle-thin"></i>
+      </span>
+      </li>
+  
+      <li>
+        <span>Django & FastApi</span>
+        <span class="rating">
+        <i class="fa fa-circle"></i>
+        <i class="fa fa-circle"></i>
+        <i class="fa fa-circle-thin"></i>
+        </span>
+        </li>
+        
+        <li>
+          <span>Visual Basic</span>
+          <span class="rating">
+          <i class="fa fa-circle"></i>
+          <i class="fa fa-circle"></i>
+          <i class="fa fa-circle-thin"></i>
+          </span>
+          </li>
+       
+          <li>
+            <span>PowerBI</span>
+            <span class="rating">
+            <i class="fa fa-circle"></i>
+            <i class="fa fa-circle"></i>
+            <i class="fa fa-circle-thin"></i>
+            </span>
+            </li>
+        <li>
+        <span>HTML & CSS</span>
+        <span class="rating">
+        <i class="fa fa-circle"></i>
+        <i class="fa fa-circle-thin"></i>
+        <i class="fa fa-circle-thin"></i>
+        </span>
+        </li>
+
+        <li>
+        <span>JavaScript & Jquery</span>
+        <span class="rating">
+        <i class="fa fa-circle"></i>
+        <i class="fa fa-circle-thin"></i>
+        <i class="fa fa-circle-thin"></i>
+        </span>
+        </li>
+
+      </ul>
+      </div>
+      </div>
+      <div class="clearfix visible-sm"></div>
+      <div class="service-box col-md-4 col-sm-6 col-xs-12">
+      <div class="service-box-icon"><span><i class="fa fa-cloud icon-custom-style"></i></span></div>
+      <div class="service-box-content">
+      <h3>CI/CD</h3>
+      
+      <ul class="leaders">
+        <li>
+          <span>GIT</span>
+          <span class="rating">
+          <i class="fa fa-circle"></i>
+          <i class="fa fa-circle"></i>
+          <i class="fa fa-circle"></i>
+          </span>
+          </li>
+          <li>
+            <span>BASH</span>
+            <span class="rating">
+            <i class="fa fa-circle"></i>
+            <i class="fa fa-circle"></i>
+            <i class="fa fa-circle-thin"></i>
+            </span>
+            </li>
+            <li>
+              <span>Github Action & GitlabCI</span>
+              <span class="rating">
+              <i class="fa fa-circle"></i>
+              <i class="fa fa-circle"></i>
+              <i class="fa fa-circle-thin"></i>
+              </span>
+              </li>
+              <li>
+                <span>Vagrant & Docker</span>
+                <span class="rating">
+                <i class="fa fa-circle"></i>
+                <i class="fa fa-circle"></i>
+                <i class="fa fa-circle-thin"></i>
+                </span>
+                </li>
+                <li>
+                  <span>Heroku</span>
+                  <span class="rating">
+                  <i class="fa fa-circle"></i>
+                  <i class="fa fa-circle"></i>
+                  <i class="fa fa-circle-thin"></i>
+                  </span>
+                  </li>
+                <li>
+                  <span>Kubernetes</span>
+                  <span class="rating">
+                  <i class="fa fa-circle"></i>
+                  <i class="fa fa-circle-thin"></i>
+                  <i class="fa fa-circle-thin"></i>
+                  </span>
+                  </li>
+                
+                  <li>
+                    <span>Amazon AWS</span>
+                    <span class="rating">
+                    <i class="fa fa-circle"></i>
+                    <i class="fa fa-circle-thin"></i>
+                    <i class="fa fa-circle-thin"></i>
+                    </span>
+                    </li>
+      
+      </ul>
+      </div>
+      </div>
+      <div class="clearfix visible-md visible-lg"></div>
+      <div class="service-box col-md-4 col-sm-6 col-xs-12">
+      <div class="service-box-icon"><span><i class="fa fa-desktop icon-custom-style"></i></span></div>
+      <div class="service-box-content">
+      <h3>Logiciels</h3>
+      <h4><i class="fa fa-caret-right"></i> Systèmes</h4>
+      <ul class="leaders">
+      <li>
+      <span>Linux / Windows/ MacOS</span>
+      <span class="rating">
+      <i class="fa fa-circle"></i>
+      <i class="fa fa-circle"></i>
+      <i class="fa fa-circle"></i>
+      </span>
+      </li>
+      <li>
+      <span>Réseau</span>
+      <span class="rating">
+      <i class="fa fa-circle"></i>
+      <i class="fa fa-circle-thin"></i>
+      <i class="fa fa-circle-thin"></i>
+      </span>
+      </li>
+      <li>
+      
+      </ul>
+      <h4><i class="fa fa-caret-right"></i> Bureautique</h4>
+      <ul class="leaders">
+      <li>
+      <span>Microsoft Office</span>
+      <span class="rating">
+      <i class="fa fa-circle"></i>
+      <i class="fa fa-circle"></i>
+      <i class="fa fa-circle"></i>
+      </span>
+      </li>
+      <li>
+      <span>LaTeX</span>
+      <span class="rating">
+      <i class="fa fa-circle"></i>
+      <i class="fa fa-circle"></i>
+      <i class="fa fa-circle-thin"></i>
+      </span>
+      </li>
+    
+      </ul>
+      </div>
+      </div>
+      <div class="clearfix visible-sm"></div>
+      <div class="service-box col-md-4 col-sm-6 col-xs-12">
+      <div class="service-box-icon"><span><i class="fa fa-users icon-custom-style"></i></span></div>
+      <div class="service-box-content">
+      <h3>Communication</h3>
+      <h4><i class="fa fa-caret-right"></i> Langues</h4>
+      <ul class="leaders">
+      <li>
+      <span data-placement="bottom" title="" data-original-title="Langue maternelle">Français</span>
+      <span class="rating">
+      <i class="fa fa-circle"></i>
+      <i class="fa fa-circle"></i>
+      <i class="fa fa-circle"></i>
+      </span>
+      </li>
+      <li>
+      <span data-placement="bottom" title="" data-original-title="">Anglais</span>
+      <span class="rating">
+      <i class="fa fa-circle"></i>
+      <i class="fa fa-circle"></i>
+      <i class="fa fa-circle-thin"></i>
+      </span>
+      </li>
+      </ul>
+      </div>
+      </div>
+      <div class="service-box col-md-4 col-sm-6 col-xs-12">
+      <div class="service-box-icon"><span><i class="fa fa-home icon-custom-style"></i></span></div>
+      <div class="service-box-content">
+      <h3>Hobbies</h3>
+      
+      <ul class="">
+      <li>
+      <span data-placement="bottom" title="" data-toggle="tooltip" data-original-title="">5 ans de basketball en club</span>
+      </li>
+      <li>
+      <span data-placement="bottom" title="" data-toggle="tooltip" data-original-title="">Fan des Bucks de Milwaukee</span>
+      </li>
+      <li>
+      <span data-placement="bottom" title="" data-toggle="tooltip" data-original-title="">Fan de Jazz</span>
+      </li>
+      </ul>
+      </div>
+      </div>
+      <div class="clearfix"></div>
+      <div class="caption text-right col-xs-12">
+      <span class="rating"><i class="fa fa-circle"></i> <i class="fa fa-circle-thin"></i> <i class="fa fa-circle-thin"></i> </span> <span data-toggle="tooltip" title="" data-original-title="Je l'ai un peu utilisé et connais les bases">Débutant</span> /
+      <span class="rating"><i class="fa fa-circle"></i> <i class="fa fa-circle"></i> <i class="fa fa-circle-thin"></i> </span> <span data-toggle="tooltip" title="" data-original-title="Je l'ai utilisé sur plusieurs projets et suis à l'aise avec">Maitrisé</span> /
+      <span class="rating"><i class="fa fa-circle"></i> <i class="fa fa-circle"></i> <i class="fa fa-circle"></i> </span> <span data-toggle="tooltip" title="" data-original-title="Je le connais en profondeur et en maitrise les concepts avancés">Avancé ou expert</span>
+      </div>
+      <div class="clearfix"></div>
+      </div>
+      </div>
+      </section>
+
+
+
+
+
+
+
+
+
+    <section id="expériences" class="onepage-block style-gray">
+    <div class="container">
+    <h2>Expériences Professionnelles</h2>
+    <div id="cd-timeline" class="cd-container
+            cd-timeline-reveal
+            
+            cd-center">
+    <div id="experience-0" class="cd-timeline-block cd-enter" data-type="pro" data-tags="ML,research">
+    <div class="cd-timeline-img cd-type-pro bounce-in">
+    <i class="fa fa-briefcase"></i>
+    </div>
+    <div class="cd-timeline-content bounce-in">
+    <h3>Data scientist</h3>
+    <p class="subtitle">C-Ways, Paris</p>
+    <p class="cd-date">Nov. 2023 <em>Sept. 2023</em></p>
+
+C-Ways est une société de conseil basée sur la science des données qui accompagne les entreprises dans les secteurs
+de la mobilité, de la mode, du luxe, des services financiers et du sport.
+<br><br>
+Missions :
+<ul>
+  <li>Segmentation lifestyle, Réalisation d'un topic modelling pour.
+  </li>
+  <li>
+    Création d'un modèle de prévision de la consommation alimentaire des Français.
+  </li>
+  <li>
+  Développement d'un package Python pour automiser l'analyse de sondage.
+
+  </li>
+  <li>
+    Scraping de toutes les adresses des garages de la chaîne Point S.
+  </li>
+  <li>
+   Réalisation d'études statistiques sur les iris en France avec GeoPandas.
+  </li>
+  <li>
+    Analyse des bases de données clients et des bases de données de transaction.
+  </li>
+  <li>
+    Mise en place d'équations commerciales. Calcul du taux d'attrition.
+  </li>
+
+  
+
+</ul>
+<p style="font-weight: bold;">
+  Outils: Python, Pandas, Spark, BigQuery, SQL, Git, Tensorflow,
+Kmeans, NeuralProphet, BERTopic, scrapy, Séries temporelles,
+API RestFul, BERT, Hugging Face, Words Embeddings, Spacy, NLP
+</p>
+<a class="btn btn-default btn-sm btn-sm cd-read-more" href="https://drive.google.com/file/d/1pY_lfNXEZhcdfA5EBIGTdi8DvkVnKq0P/view?usp=sharing">Rapport de Stage <i class="fa fa-chevron-right"></i></a>
+    
+<a class="btn btn-default btn-sm btn-sm cd-read-more" href="https://drive.google.com/file/d/1oa9wxyKWt1YfFhuaETBW0pUYtYI35zIM/view?usp=sharing">Slides <i class="fa fa-chevron-right"></i></a>
+
+    
+    </div>
+    </div>
+    <div id="experience-1" class="cd-timeline-block cd-enter" data-type="edu" data-tags="ML,research">
+    <div class="cd-timeline-img cd-type-edu bounce-in">
+    <i class="fa fa-briefcase"></i>
+    </div>
+    <div class="cd-timeline-content bounce-in">
+    <h3>Data scientist</h3>
+    <p class="subtitle">CCR, Paris</p>
+    <p class="cd-date">Juin 2022 <em>Août 2022</em></p>
+    En tant que réassureur public et réassureur pour les secteurs de l'assurance vie, de l'assurance non-vie et des risques spéciaux en France et à l'international, la CCR développe également des services à forte valeur ajoutée pour ses clients.
+    <br><br>
+Missions :
+<ul>
+ 
+
+  <li>
+    Benchmark de différentes technologies de reconnaissance optique
+de caractère. Mise en place d’une pipeline CI/CD avec GitLabCI
+
+  </li>
+  <li>Réalisation d’un outil streamlit sous python  </li>
+  <li>Déploiement de l’application sur Heroku
+    </li>
+</ul>
+<p style="font-weight: bold;">
+  Outils: Python, Pandas, Tensorflow, Pytorch, GitLabCI, Jupyter
+    notebook, Anglais, Méthodologie agile, PowerPoint
+</p>
+    
+    </p>
+    </div>
+    </div>
+    <div id="experience-2" class="cd-timeline-block cd-enter" data-type="pro" data-tags="ML,research">
+    <div class="cd-timeline-img cd-type-pro bounce-in">
+    <i class="fa fa-briefcase"></i>
+    </div>
+    <div class="cd-timeline-content bounce-in">
+    <h3>Data Analyst</h3>
+    <p class="subtitle"> Crédit Agricole Nord Est, Strasbourg</p>
+    <p class="cd-date">Juil 2021</span> <em>Août 2021</em></p>
+    Missions :
+
+   <ul>
+    <li>
+      Migration et automatisation de l’outil de contrôle des souscriptions
+    </li>
+   </ul>
+
+   <p style="font-weight: bold;">
+    Outils: Power BI, Python, VBA, Anglais
+
+   </p>
+    <div class="clearfix"></div>
+    <p class="text-right">
+    
+    </p>
+    </div>
+
+    
+    
+    </div>
+    <div id="experience-1" class="cd-timeline-block cd-enter" data-type="edu" data-tags="ML,research">
+      <div class="cd-timeline-img cd-type-edu bounce-in">
+      <i class="fa fa-briefcase"></i>
+      </div>
+      <div class="cd-timeline-content bounce-in">
+      <h3>Statisticien</h3>
+      <p class="subtitle">Crédit Agricole Nord Est, Strasbourg</p>
+      <p class="cd-date">Juin 2020 <em>Juil 2022</em></p>
+      Missions :
+
+  <ul>
+    <li>
+      Matching de base de données
+    </li>
+  </ul>
+  <p style="font-weight: bold;">
+    Outils: Python, Pandas, Numpy, Excel
+
+  </p>
+      
+      </p>
+      </div>
+      </div>
+    </div>
+    <div class="cd-timeline-dot"></div>
+    <div class="cd-timeline-dot"></div>
+    <div class="cd-timeline-dot"></div>
+    <div class="clearfix"></div>
+    <!--<p class="text-center mrgtop30">
+    <a href="/fr/cv#expériences" class="btn btn-info">Voir toutes mes expériences <i class="fa fa-chevron-right fa-margin-left"></i></a>
+    </p>-->
+    </div>
+    </section>
+    <section id="recherche" class="onepage-block ">
+    <div class="container">
+    <h2>Projets</h2>
+    <div class="content">
+      <!--
+      <div class="publication clearfix   ">
+        <div class="icon color-emph">
+        <i class="fa fa-building-o" data-toggle="tooltip" title="" data-original-title="Conference"></i>
+        </div>
+        <div class="publi-image"><img src="/data/publis/dualdis.png" alt=""></div>
+        <div class="publi-content">
+        <h4 class="publi-title">Creatio API avec FastApi</h4>
+        <p>
+          Description : 
+
+        <ul>
+          <li></li>
+        </ul>
+        </p>
+        <p style="font-weight: bold;">
+        </p>
+        <p class="publi-urls btns-container">
+          <a class="btn btn-primary " href="#">github</a>
+          
+          </p>
+        </div>
+        </div>
+      -->
+      <div class="publication clearfix   ">
+        <div class="icon color-emph">
+        <i class="fa fa-building-o" data-toggle="tooltip" title="" data-original-title="Conference"></i>
+        </div>
+        <div class="publi-content">
+        <h4 class="publi-title">Projets NLP</h4>
+        <p>
+          Description : 
+          <ul>
+            <li></li>
+          </ul>
+        </p>
+        <p style="font-weight: bold;">
+        </p>
+        <p class="publi-urls btns-container">
+          <a class="btn btn-primary " href="#">github</a>
+          <a class="btn btn-info" href="#">app</a>
+
+          </p>
+      
+        </div>
+        </div>
+    <div class="publication clearfix   ">
+    <div class="icon color-emph">
+    <i class="fa fa-file-text-o" data-toggle="tooltip" title="" data-original-title="PhD thesis"></i>
+    </div>
+    <div class="publi-content">
+    <h4 class="publi-title">Reconnaissance optique de caractère avec Tesseract</h4>
+    <p>
+      Description : Création d'une application web avec streamlit et tesseract pour faire l'extraction de texte sur des images et des documents pdf.
+      
+    </p>
+    <p style="font-weight: bold;">
+    </p>
+    <p class="publi-urls btns-container">
+    <a class="btn btn-primary " href="https://github.com/egah/ocr-app">github</a>
+    </p>
+    </div>
+    </div>
+    <div class="publication clearfix   ">
+      <div class="icon color-emph">
+      <i class="fa fa-building-o" data-toggle="tooltip" title="" data-original-title="Conference"></i>
+      </div>
+      <div class="publi-content">
+      <h4 class="publi-title">Words embeddings et clustering</h4>
+      <p>
+        Description : 
+        Travaux de recherche en anglais sur le traitement du langage naturel (NLP)
+
+        <ul>
+<li>Comparaison de plusieurs méthodes de <i>word embeddings</i> : TfIdf, word2Vec, BERT</li>
+<li>Clustering d'un corpus de document en utilisant les méthodes comme les Kmeans, Dbscan et Optics.</li>
+<li>Topic modelling en utilisant le Latent Dirichlet Allocation (LDA)</li>
+        </ul>
+      </p>
+      <p style="font-weight: bold;">
+      </p>
+      </div>
+      </div>
+      <div class="publication clearfix   ">
+        <div class="icon color-emph">
+        <i class="fa fa-building-o" data-toggle="tooltip" title="" data-original-title="Conference"></i>
+        </div>
+        <div class="publi-content">
+        <h4 class="publi-title">Modélisation risque crédit</h4>
+        <p>
+          Description : L'exposition en cas de defaut, la perte en cas de défaut et la probabilité de défaut sont trois métriques utilisées par les institutions financières dans la gestion
+          du risque de crédit. L'objectif de ce projet est de prédire grâce à des modèles de machine learning la probabilité de défaut.
+          <ul>
+            <li>Estimation de la probabilité de défaut par régression logistique et par gradient boosting
+             </li>
+             <li>Evaluation de la qualité de nos deux modèles en utilisant des mesures comme le recall, la précision, la sensitivité et la spécificité</li>
+
+             <li>
+              Création d’une table de stratégie qui permet d’évaluer la valeur de notre portefeuille en
+              utilisant différentes valeurs pour le taux d’acceptation
+             </li>
+          </ul>
+        </p>
+        <p style="font-weight: bold;">
+        </p>
+        </div>
+        </div>
+   
+    <!--<p class="text-center clearfix">
+    <a href="#" class="btn btn-primary">
+    See all my publications
+    <i class="fa fa-chevron-right fa-margin-left"></i>
+    </a>
+    </p>-->
+    </div>
+    </div>
+    </section>
+    <section id="contact" class="onepage-block large cover-image parallax" style="background-image: url('../static/Images/contact.jpg')">
+    <div class="container">
+    <h2>Me contacter</h2>
+    <div class="content" style="margin-left: 150px;">
+    <a class="contact-block color-emph-light col-sm-3 col-xs-6 contact-show-email" href="#">
+    <i class="fa fa-at"></i> <button class="btn btn-default">Afficher l'adresse mail</button>
+    <span class="hidden">[ "m", "o", "c", ".","l", "i", "a", "m", "g", "!", "e","n","a", "h", "p", "i", "p", "e", "h", "a", "g", "e"]</span>
+    
+    <div class="clearfix visible-xs"></div>
+    <a class="contact-block color-emph-light col-sm-3 col-xs-6" href="https://www.linkedin.com/in/egahepiphane/">
+    <i class="fa fa-linkedin"></i> epiphaneegah
+    </a>
+    <a class="contact-block color-emph-light col-sm-3 col-xs-6" href="https://github.com/egah">
+    <i class="fa fa-github"></i> @egah
+    </a>
+    <div class="clearfix visible-xs"></div>
+    <div class="clearfix visible-sm visible-lg"></div>
+    </div>
+    </div>
+    </section>
+    </main>
+    <script async="" src="https://www.google-analytics.com/analytics.js"></script>
+    {% load static %}
+    <script src="{% static 'js/fichier_6.js' %}"></script>
+    {% load static %}
+    <script src="{% static 'js/fichier_1.js' %}"></script>
+    {% load static %}
+    <script src="{% static 'js/fichier_2.js' %}"></script>
+    {% load static %}
+    <script src="{% static 'js/fichier_3.js' %}"></script>
+    {% load static %}
+    <script src="{% static 'js/fichier_4.js' %}"></script>
+    {% load static %}
+    <script src="{% static 'js/fichier_5.js' %}"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    
+      ga('create', 'UA-12985376-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+    
+    
+    </body></html>
