@@ -80,27 +80,40 @@
 
 
 
-
-    <section id="contact" class="onepage-block large cover-image parallax" style="background-image: url('../static/Images/contact.jpg')">
-      <div class="container">
+<section id="contact" class="onepage-block large cover-image parallax" style="background-image: url('../static/Images/contact.jpg')">
+  <div class="container">
       <h2>Me contacter</h2>
-      <div class="content" style="margin-left: 150px;">
-      <a class="contact-block color-emph-light col-sm-3 col-xs-6 contact-show-email" href="#">
-      <i class="fa fa-at"></i> <button class="btn btn-default">Afficher l'adresse mail</button>
-      <span class="hidden">[ "m", "o", "c", ".","l", "i", "a", "m", "g", "!", "e","n","a", "h", "p", "i", "p", "e", "h", "a", "g", "e"]</span>
-      
-      <div class="clearfix visible-xs"></div>
-      <a class="contact-block color-emph-light col-sm-3 col-xs-6" href="https://www.linkedin.com/in/egahepiphane/">
-      <i class="fa fa-linkedin"></i> epiphaneegah
-      </a>
-      <a class="contact-block color-emph-light col-sm-3 col-xs-6" href="https://github.com/egah">
-      <i class="fa fa-github"></i> @egah
-      </a>
-      <div class="clearfix visible-xs"></div>
-      <div class="clearfix visible-sm visible-lg"></div>
+      <div class="content row"> <!-- Added 'row' class here -->
+          <div class="contact-block color-emph-light col-md-4 col-sm-6 col-xs-12"> <!-- Modified column classes -->
+              <i class="fa fa-at"></i>
+              <button class="btn btn-default" onclick="toggleEmail()">Afficher l'adresse mail</button>
+              <span id="emailSpan" class="hidden">egahepiphane@gmail.com</span>
+          </div>
+          <div class="clearfix visible-xs"></div>
+          <div class="contact-block color-emph-light col-md-4 col-sm-6 col-xs-12"> <!-- Modified column classes -->
+              <a href="https://www.linkedin.com/in/egahepiphane/">
+                  <i class="fa fa-linkedin"></i> epiphaneegah
+              </a>
+          </div>
+          <div class="contact-block color-emph-light col-md-4 col-sm-6 col-xs-12"> <!-- Modified column classes -->
+              <a href="https://github.com/egah">
+                  <i class="fa fa-github"></i> @egah
+              </a>
+          </div>
+          <div class="clearfix visible-xs"></div>
+          <div class="clearfix visible-sm visible-lg"></div>
       </div>
-      </div>
-      </section>
+  </div>
+
+  <script>
+      function toggleEmail() {
+          var emailSpan = document.getElementById('emailSpan');
+          emailSpan.classList.toggle('hidden');
+      }
+  </script>
+</section>
+
+
       </main>
       <script async="" src="https://www.google-analytics.com/analytics.js"></script>
       {% load static %}
