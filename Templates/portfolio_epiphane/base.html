@@ -12,8 +12,18 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-..." crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+    <style>
+        /* Add your custom styles here */
+        /* For example, adjust the navbar height for smaller screens */
+        @media (max-width: 767px) {
+            #header.navbar {
+                min-height: 50px;
+            }
+        }
 
-    
+        /* Adjust other styles as needed */
+    </style>
 
 
     </head>
@@ -28,15 +38,15 @@
     <span class="icon-bar"></span>
     </button>
     <a class="navbar-brand" href="/">
-    <span class="navbar-brand-img"><img src="#" alt=""></span>
+    <span class="navbar-brand-img"><img src="" alt=""></span>
     <span class="navbar-brand-title">Epiphane Egah</span>
     </a>
     </div>
-    <div class="navbar-collapse collapse in" aria-expanded="true">
+    <div class="navbar-collapse collapse out" aria-expanded="true">
     <ul class="nav navbar-nav navbar-right">
     <li class=""><a href="#profil">Profil</a></li>
     <li class=""><a href="#compétences">Compétences</a></li>
-    <li class="active"><a href="#expériences">Expériences</a></li>
+    <li class=""><a href="#expériences">Expériences</a></li>
     <li><a href="#recherche">Projet</a></li>
     <li><a href="#contact">Contact</a></li>
     <li class="dropdown">
@@ -79,39 +89,29 @@
 {% endblock %}
 
 
-
-<section id="contact" class="onepage-block large cover-image parallax" style="background-image: url('../static/Images/contact.jpg')">
-  <div class="container">
-      <h2>Me contacter</h2>
-      <div class="content row"> <!-- Added 'row' class here -->
-          <div class="contact-block color-emph-light col-md-4 col-sm-6 col-xs-12"> <!-- Modified column classes -->
-              <i class="fa fa-at"></i>
-              <button class="btn btn-default" onclick="toggleEmail()">Afficher l'adresse mail</button>
-              <span id="emailSpan" class="hidden">egahepiphane@gmail.com</span>
-          </div>
-          <div class="clearfix visible-xs"></div>
-          <div class="contact-block color-emph-light col-md-4 col-sm-6 col-xs-12"> <!-- Modified column classes -->
-              <a href="https://www.linkedin.com/in/egahepiphane/">
-                  <i class="fa fa-linkedin"></i> epiphaneegah
-              </a>
-          </div>
-          <div class="contact-block color-emph-light col-md-4 col-sm-6 col-xs-12"> <!-- Modified column classes -->
-              <a href="https://github.com/egah">
-                  <i class="fa fa-github"></i> @egah
-              </a>
-          </div>
-          <div class="clearfix visible-xs"></div>
-          <div class="clearfix visible-sm visible-lg"></div>
+  
+  <section id="contact" class="onepage-block large cover-image parallax" style="background-image: url('../static/Images/contact.jpg')">
+    <div class="container">
+      <h2 style="text-align: center;">Me contacter</h2>
+      <div class="content">
+        <a class="contact-block color-emph-light col-md-4 col-sm-4 col-xs-12 contact-show-email" href="#">
+          <i class="fa fa-at"></i> <button class="btn btn-default">Afficher l'adresse mail</button>
+          <span class="hidden">[ "m", "o", "c", ".","l", "i", "a", "m", "g", "!", "e","n","a", "h", "p", "i", "p", "e", "h", "a", "g", "e"]</span>
+        </a>
+        <div class="clearfix visible-xs"></div>
+        <a class="contact-block color-emph-light col-md-4 col-sm-4 col-xs-12" href="https://www.linkedin.com/in/egahepiphane/">
+          <i class="fa fa-linkedin"></i> epiphaneegah
+        </a>
+        <a class="contact-block color-emph-light col-md-4 col-sm-4 col-xs-12" href="https://github.com/egah">
+          <i class="fa fa-github"></i> @egah
+        </a>
+        <div class="clearfix visible-xs"></div>
+        <div class="clearfix visible-sm visible-lg"></div>
       </div>
-  </div>
+    </div>
+  </section>
 
-  <script>
-      function toggleEmail() {
-          var emailSpan = document.getElementById('emailSpan');
-          emailSpan.classList.toggle('hidden');
-      }
-  </script>
-</section>
+      
 
 
       </main>
