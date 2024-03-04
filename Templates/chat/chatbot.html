@@ -14,14 +14,27 @@
             <div class="col-md-12">
                 <h1>Pages / Chat UI</h1>
              
-                <div id="chat-log" class="chat-box"></div>
-                <input type="text" id="chat-message-input" class="form-control" placeholder="Type your message">
-                <button id="chat-message-submit" class="btn btn-primary">Submit</button>
+                <div id="chat-log" class="chat-box" style="height: 850px;"></div>
+                <div class="d-flex">
+                  <input type="text" id="chat-message-input" style="border-radius: 10%; height: 70px;" class="form-control flex-grow-1 mr-2" placeholder="Type your message">
+                  <button id="chat-message-submit" class="btn btn-primary" style="border-radius: 30%; height: 70px; width: 170px;">Submit</button>
+              </div>
             </div>
+            <footer>
+             <div style="padding-left: 35%; padding-right: 15%;">
+              ©  2024Horizon UI AI Template. All Rights Reserved.
+
+ 
+              <p>
+                Hompeage | About | Contact
+              </p>
+             </div>
+            </footer>
         </div>
     </div>
     
       <script>
+        <!--code : make user input and bot input styling more beautiful-->
       var wss_protocol = window.location.protocol == "https:" ? "wss://" : "ws://";
       var chatSocket = new WebSocket(
         wss_protocol + window.location.host + "/ws/chat/"
