@@ -1,84 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Bootstrap CSS -->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-beta1/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Custom CSS for chatbot -->
+    <title>Chat UI</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <style>
-        .chat-message {
-            border-radius: 20px;
-            padding: 10px;
-            margin-bottom: 5px;
-        }
-        .chat-message-bot {
-            background-color: #007bff;
-            color: white;
-            text-align: left;
-        }
-        .chat-message-user {
-            background-color: #f8f9fa;
-            color: black;
-            text-align: right;
-        }
-
     </style>
-
-
-
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Epiphane Egah</title>
-{% load static %}
-<link rel="icon" href="{% static 'Images/favicon.ico'%}" type="image/png">
-<meta name="description" content="">
-<link rel="stylesheet" href="{% static 'css/homepage.css' %}">
-<!--<link rel="shortcut icon" href="#">-->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-..." crossorigin="anonymous" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-.body_color {
-    
-background-color: #f4f4f4;
-}
-
-#particles-js {
-  background-image: url("../static/Images/3418448.jpg");
-
-}
-</style>
-    <!-- jQuery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
-  <header class="post-header particles">
-    <div class="background" id="particles-js"><canvas class="particles-js-canvas-el" style="width: 100%; height: 100%;" width="200" height="100"></canvas></div>
-    <div class="container-fluid">
-    <h1 class="post-title" style="color: white;">Bienvenu sur mon assistant AI</h1>
-    <div class="post-intro color-emph-light">
-    </div>
-    </div>
-    </header>
-   <div style="text-align: center;">
-    <h1 class="display-4 font-weight-light" id="chat-header"></h1>
-    <div id="chat-log" class="mt-4 w-100 p-6 overflow-auto" style="height: 750px;"></div>
-    <div class="mt-4">
-        <div class="flex w-full items-center"><div class="overflow-hidden [&amp;:has(textarea:focus)]:border-token-border-xheavy [&amp;:has(textarea:focus)]:shadow-[0_2px_6px_rgba(0,0,0,.05)] flex flex-col w-full dark:border-token-border-medium flex-grow relative border border-token-border-medium dark:text-white rounded-2xl bg-token-main-surface-primary"><lt-mirror contenteditable="false" class="lt-mirror--grid-item" data-lt-linked="1" style="display: none;"><lt-highlighter contenteditable="false" style="display: none;"><lt-div spellcheck="false" class="lt-highlighter__wrapper" style="width: 512.303px !important; height: 65px !important; transform: none !important; transform-origin: 256.152px 32.5px !important; zoom: 1 !important;"><lt-div class="lt-highlighter__scroll-element" style="top: 0px !important; left: 0px !important; width: 512px !important; height: 65px !important;"></lt-div></lt-div></lt-highlighter><lt-div spellcheck="false" class="lt-mirror__wrapper notranslate" data-lt-scroll-top="0" data-lt-scroll-left="0" data-lt-scroll-top-scaled="0" data-lt-scroll-left-scaled="0" data-lt-scroll-top-scaled-and-zoomed="0" data-lt-scroll-left-scaled-and-zoomed="0" style="border: 0px solid rgb(155, 155, 155) !important; border-radius: 0px !important; direction: ltr !important; font: 400 20px / 30px Söhne, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, Roboto, Ubuntu, Cantarell, &quot;Noto Sans&quot;, sans-serif, &quot;Helvetica Neue&quot;, Arial, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Noto Color Emoji&quot; !important; font-synthesis: weight style small-caps !important; hyphens: manual !important; letter-spacing: normal !important; line-break: auto !important; margin: 0px !important; padding: 17.5px 60px 17.5px 20px !important; text-align: start !important; text-decoration: none solid rgb(0, 0, 0) !important; text-indent: 0px !important; text-rendering: auto !important; text-transform: none !important; transform: none !important; transform-origin: 256.152px 32.5px !important; unicode-bidi: normal !important; white-space: pre-wrap !important; word-spacing: 0px !important; overflow-wrap: break-word !important; writing-mode: horizontal-tb !important; zoom: 1 !important; -webkit-locale: &quot;en-US&quot; !important; -webkit-rtl-ordering: logical !important; width: 432.303px !important; height: 30px !important;"><lt-div class="lt-mirror__canvas" style="margin-top: 0px !important; margin-left: 0px !important; width: 432.303px !important; height: 30px !important;"></lt-div></lt-div></lt-mirror><textarea id="prompt-textarea" tabindex="0" data-id="root" rows="1" placeholder="Message ChatGPT…" class="m-0 w-full resize-none border-0 bg-transparent focus:ring-0 focus-visible:ring-0 dark:bg-transparent max-h-25 py-[10px] pr-10 md:py-3.5 md:pr-12 placeholder-black/50 dark:placeholder-white/50 pl-3 md:pl-4" style="height: 65px; overflow-y: hidden;" data-lt-tmp-id="lt-197366" spellcheck="false" data-gramm="false"></textarea><button disabled="" class="absolute bottom-1.5 right-2 rounded-lg border border-black bg-black p-0.5 text-white transition-colors enabled:bg-black disabled:text-gray-400 disabled:opacity-10 dark:border-white dark:bg-white dark:hover:bg-white md:bottom-3 md:right-3" data-testid="send-button"><span class="" data-state="closed"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" class="text-white dark:text-black"><path d="M7 11L12 6L17 11M12 18V7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></span></button></div></div>
-    </div>
-   </div>
-<footer>
     <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <p class="text-center">© 2021 Epiphane Egah</p>
+        <div class="row">
+            <div class="col-md-12">
+                <h1>Pages / Chat UI</h1>
+             
+                <div class="chat-box">
+                    <!-- code : look at the javascript section and adapt my html tag , class and id to have a functionnal frontedn for my chatbot -->
+                </div>
+                <input type="text" class="form-control" placeholder="Type your message">
+                <button class="btn btn-primary">Submit</button>
+            </div>
         </div>
-      </div>
     </div>
-</footer>
-    <!-- Your existing JavaScript code goes here -->
-    <script>
+    
+      <script>
       var wss_protocol = window.location.protocol == "https:" ? "wss://" : "ws://";
       var chatSocket = new WebSocket(
         wss_protocol + window.location.host + "/ws/chat/"
@@ -130,27 +75,5 @@ background-color: #f4f4f4;
         messageInputDom.value = "";
       };
     </script>
-      <script async="" src="https://www.google-analytics.com/analytics.js"></script>
-      {% load static %}
-      <script src="{% static 'js/fichier_6.js' %}"></script>
-      {% load static %}
-      <script src="{% static 'js/fichier_1.js' %}"></script>
-      {% load static %}
-      <script src="{% static 'js/fichier_2.js' %}"></script>
-      {% load static %}
-      <script src="{% static 'js/fichier_3.js' %}"></script>
-      {% load static %}
-      <script src="{% static 'js/fichier_4.js' %}"></script>
-      {% load static %}
-      <script src="{% static 'js/fichier_5.js' %}"></script>
-      <script>
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-      
-        ga('create', 'UA-12985376-1', 'auto');
-        ga('send', 'pageview');
-      </script>
 </body>
 </html>
