@@ -33,48 +33,7 @@
     </style>
 </head>
 <body>
-  <div class="sidebar-container">
-    <div class="sidebar">
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">ChatBot</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Features</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Pricing</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-    </div>
-  </div>
-  <style>
-    .sidebar-container {
-      position: fixed;
-      width: 250px;
-      height: 100%;
-      left: 0;
-      overflow-x: hidden;
-      overflow-y: auto;
-      background: #1a1a1a;
-      color: #ddd;
-    }
-    .sidebar {
-      padding: 10px;
-      background: #333;
-    }
-  </style>
+  <!--add a side bar using boostrap , jquery, css et javascript-->
     <div class="container">
         <div class="row">
             <div class="col-md-12">
@@ -87,41 +46,11 @@
               </div>
             </div>
             <footer>
-             <div style="padding-left: 35%; padding-right: 15%;">
-              ©  2024Horizon UI AI Template. All Rights Reserved.
-
-
-              <p>
-                Hompeage | About | Contact
-              </p>
-             </div>
+           
             </footer>
         </div>
     </div>
-    <script>
-      // ... existing script code ...
-
-      chatSocket.onmessage = function (e) {
-        var data = JSON.parse(e.data);
-        var message = data["text"];
-        messages.push(message);
-
-        var str = '';
-        messages.forEach(function (msg) {
-          str += `<div class="flex ${
-            msg.source == "bot" ? "justify-start" : "justify-end"
-          }">
-          <div class="chat-message ${
-            msg.source == "bot"
-                ? "chat-message-bot"
-                : "chat-message-user"
-            }">${msg.msg}</div></div>`;
-        });
-        document.querySelector("#chat-log").innerHTML = str;
-      };
-
-      // ... existing script code ...
-    </script>
+    <!-- render the bot and user message without the unorder list -->
       <script>
       var wss_protocol = window.location.protocol == "https:" ? "wss://" : "ws://";
       var chatSocket = new WebSocket(
