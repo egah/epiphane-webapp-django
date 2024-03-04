@@ -8,10 +8,9 @@
     <style>
       .chat-box {
         overflow-y: auto;
-        border: 1px solid #ccc;
         padding: 10px;
         border-radius: 10px;
-        background-color: #f9f9f9;
+        background-color: white;
         margin-bottom: 20px;
       }
       .chat-message {
@@ -23,11 +22,13 @@
       .chat-message-bot {
         background-color: #e0e0e0;
         margin-right: auto;
+        margin-bottom: 20px;;
       }
       .chat-message-user {
         background-color: #4e8cff;
         color: white;
         margin-left: auto;
+        margin-bottom: 20px;
       }
     </style>
 </head>
@@ -40,7 +41,7 @@
                 <div id="chat-log" class="chat-box" style="height: 850px;"></div>
                 <div class="d-flex">
                   <input type="text" id="chat-message-input" style="border-radius: 10%; height: 70px;" class="form-control flex-grow-1 mr-2" placeholder="Type your message">
-                  <button id="chat-message-submit" class="btn btn-primary" style="border-radius: 30%; height: 70px; width: 170px;">Submit</button>
+                  <button id="chat-message-submit" class="btn btn-primary" style="border-radius: 25%; height: 70px; width: 170px;">Submit</button>
               </div>
             </div>
             <footer>
