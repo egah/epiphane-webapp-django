@@ -6,6 +6,29 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <style>
+      .chat-box {
+        overflow-y: auto;
+        border: 1px solid #ccc;
+        padding: 10px;
+        border-radius: 10px;
+        background-color: #f9f9f9;
+        margin-bottom: 20px;
+      }
+      .chat-message {
+        padding: 10px;
+        border-radius: 20px;
+        display: inline-block;
+        max-width: 80%;
+      }
+      .chat-message-bot {
+        background-color: #e0e0e0;
+        margin-right: auto;
+      }
+      .chat-message-user {
+        background-color: #4e8cff;
+        color: white;
+        margin-left: auto;
+      }
     </style>
 </head>
 <body>
@@ -13,7 +36,7 @@
         <div class="row">
             <div class="col-md-12">
                 <h1>Pages / Chat UI</h1>
-             
+
                 <div id="chat-log" class="chat-box" style="height: 850px;"></div>
                 <div class="d-flex">
                   <input type="text" id="chat-message-input" style="border-radius: 10%; height: 70px;" class="form-control flex-grow-1 mr-2" placeholder="Type your message">
@@ -24,7 +47,7 @@
              <div style="padding-left: 35%; padding-right: 15%;">
               ©  2024Horizon UI AI Template. All Rights Reserved.
 
- 
+
               <p>
                 Hompeage | About | Contact
               </p>
@@ -32,7 +55,6 @@
             </footer>
         </div>
     </div>
-      <!--code : make user input and bot input styling more beautiful-->
       <script>
       var wss_protocol = window.location.protocol == "https:" ? "wss://" : "ws://";
       var chatSocket = new WebSocket(
@@ -40,12 +62,12 @@
       );
       var messages = [];
 
-    
+
       chatSocket.onmessage = function (e) {
         var data = JSON.parse(e.data);
         var message = data["text"];
         messages.push(message);
-    
+
         var str = '<ul class="space-y-2">';
         messages.forEach(function (msg) {
           str += `<li class="flex ${
@@ -60,11 +82,11 @@
         str += "</ul>";
         document.querySelector("#chat-log").innerHTML = str;
       };
-    
+
       chatSocket.onclose = function (e) {
         alert("Socket closed unexpectedly, please reload the page.");
       };
-    
+
       document.querySelector("#chat-message-input").focus();
       document.querySelector("#chat-message-input").onkeyup = function (e) {
         if (e.keyCode === 13) {
@@ -72,7 +94,7 @@
           document.querySelector("#chat-message-submit").click();
         }
       };
-    
+
       document.querySelector("#chat-message-submit").onclick = function (e) {
         var messageInputDom = document.querySelector("#chat-message-input");
         var message = messageInputDom.value;
@@ -81,7 +103,7 @@
             text: message,
           })
         );
-    
+
         messageInputDom.value = "";
       };
     </script>
