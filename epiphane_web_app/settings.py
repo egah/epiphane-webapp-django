@@ -68,7 +68,6 @@ TEMPLATES = [
 
 # WSGI_APPLICATION = "epiphane_web_app.wsgi.application"
 ASGI_APPLICATION = "epiphane_web_app.asgi.application"
-TAILWIND_APP_NAME = "theme"
 
 
 # Database
