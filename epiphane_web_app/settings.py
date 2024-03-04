@@ -1,5 +1,6 @@
 import os
 from pathlib import Path
+from decouple import config
 
 
 # import django_on_heroku
@@ -26,6 +27,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    "daphne",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
@@ -33,6 +35,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "portfolio_epiphane",
+    "chat",
 ]
 
 MIDDLEWARE = [
@@ -63,7 +66,9 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = "epiphane_web_app.wsgi.application"
+# WSGI_APPLICATION = "epiphane_web_app.wsgi.application"
+ASGI_APPLICATION = "epiphane_web_app.asgi.application"
+TAILWIND_APP_NAME = "theme"
 
 
 # Database
@@ -130,3 +135,12 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 # Configure Django App for Heroku.
 # django_on_heroku.settings(locals())
+
+CHANNEL_LAYERS = {
+    "default": {
+        "BACKEND": "channels_redis.core.RedisChannelLayer",
+        "CONFIG": {
+            "hosts": [config("REDIS_BACKEND")],
+        },
+    },
+}

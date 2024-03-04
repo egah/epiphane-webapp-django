@@ -9,11 +9,11 @@ TEMPLATE_DEBUG = True
 
 DEFAULT_ENV = os.environ.get("DATABASE_URL")
 
-DATABASES = {
-    'default': dj_database_url.config(default='postgres://localhost')
-}
+DATABASES = {"default": dj_database_url.config(default="postgres://localhost")}
 
-MIDDLEWARE += ["whitenoise.middleware.WhiteNoiseMiddleware",]
+MIDDLEWARE += [
+    "whitenoise.middleware.WhiteNoiseMiddleware",
+]
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 django_heroku.settings(locals())

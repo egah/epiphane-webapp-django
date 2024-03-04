@@ -267,3 +267,4 @@ pyrightconfig.json
 
 venv
 .env
+.aider*

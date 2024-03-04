@@ -1,0 +1,1 @@
+I want to create my personnal chatbot. Can you genarate a frontend html code that allows chat between user and bot  with a nice layout. Make hte frontend very nice as possible using bootstrap cdn 5 and jquery
