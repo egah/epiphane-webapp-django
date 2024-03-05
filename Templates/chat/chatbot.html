@@ -46,7 +46,7 @@
     <span style="border-radius: 100%; color:orange;">zzz</span>
 
 
-    <div class="chat-log chat-box">
+    <div id="chat-log" class="chat-box">
        
 
     
@@ -77,14 +77,14 @@
       str += `<li class="flex ${
         msg.source == "bot" ? "justify-start" : "justify-end"
       }">
-      <div class="chat-message ${
+      <div class="chat-bubble ${
         msg.source == "bot"
-            ? "chat-message-bot"
-            : "chat-message-user"
+            ? "left"
+            : "right"
         }">${msg.msg}</div></li>`;
     });
     str += "</ul>";
-    document.querySelector("#chat-log").innerHTML = str;
+    document.querySelector(".chat-box").innerHTML = str;
   };
 
   chatSocket.onclose = function (e) {
