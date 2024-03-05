@@ -13,15 +13,7 @@
             margin: 10px;
             padding: 10px;
             border-radius: 10px;
-        }
-        .left {
-            background-color: white;
-            color: black;
-        }
-        .right {
-            background-color: orange;
-            color: white;
-        }
+        } 
         .input-area {
             position: fixed;
             bottom: 0;
@@ -30,20 +22,45 @@
             padding-left: 15%;
             margin-right: 25%;
         }
+
+
+.chat-message {
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.bot {
+    background-color: white;
+    color: black;
+    text-align: left;
+    background-color: orange;
+            color: white;
+            padding-left: auto;
+            text-align: right;
+}
+
+.user {
+    background-color: orange;
+    color: white;
+    text-align: right;
+    background-color: white;
+            color: black;
+            padding-right: auto;
+            text-align: left;
+      
+}
+
     </style>
 </head>
 
+<!-- make the necessery change to make my chatboot.html  html file functionnal-->
 
-
-
-<!---
-          correct the chatbot.html file by changing the html tag and class or id to maje the javascript work. allowing to display the chat message while keeping the actual styling
-
--->
 
 <body>
   <div class="container">
-    <span style="border-radius: 100%; color:orange;">zzz</span>
 
 
     <div id="chat-log" class="chat-box">
@@ -72,20 +89,12 @@
     var message = data["text"];
     messages.push(message);
 
-    var str = '<ul class="space-y-2">';
-    messages.forEach(function (msg) {
-      str += `<li class="flex ${
-        msg.source == "bot" ? "justify-start" : "justify-end"
-      }">
-      <div class="chat-bubble ${
-        msg.source == "bot"
-            ? "left"
-            : "right"
-        }">${msg.msg}</div></li>`;
-    });
-    str += "</ul>";
-    document.querySelector(".chat-box").innerHTML = str;
-  };
+    var str = '<div class="chat-message">';
+messages.forEach(function (msg) {
+    str += `<div class="chat-message ${msg.source == "bot" ? "bot" : "user"}">${msg.msg}</div>`;
+});
+str += "</div>";
+document.querySelector(".chat-box").innerHTML = str;
 
   chatSocket.onclose = function (e) {
     alert("Socket closed unexpectedly, please reload the page.");
