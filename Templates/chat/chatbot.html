@@ -1,22 +1,19 @@
 <html>
-  <!--This is my chatbot interface page. can you read the Templates/chat/chat.html and duplicate it styling for textarea, chat-box and buttonin chatbot.html. To do so you need static/css/style.css and static/js/script.js-->
+  <!--This is my chatbot interface page. can correct the chatbot.html and chatbot.css to make the styling to make the tag correspond with the script tag to make the script functions works. To do so you need static/css/chatboot.css-->
   <head>
 
   <head>
     {% load static %}
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    <script src="{% static 'js/script.js' %}" defer></script>
+    <link rel="stylesheet" href="{% static 'css/chatbot.css' %}">
   </head>
 
   <body>
     <button class="chatbot-toggler">
       <span class="material-symbols-rounded">mode_comment</span>
-      <span class="material-symbols-outlined">close</span>
     </button>
     <div class="chatbot">
       <header>
         <h1>epiphane-ai</h1>
-        <span class="close-btn material-symbols-outlined">close</span>
       </header>
       <ul class="chatbox" id="chat-log">
         <!-- Chat messages will be appended here -->
@@ -27,9 +24,7 @@
       </div>
     </div>
   </body>
-  <script>
-    // Existing WebSocket and chat functionality script
-  </script>
+ 
 </html>
     <script>
     var wss_protocol = window.location.protocol == "https:" ? "wss://" : "ws://";
