@@ -2,18 +2,35 @@
   <!--This is my chatbot interface page. can you read the Templates/chat/chat.html and duplicate it styling for textarea, chat-box and buttonin chatbot.html. To do so you need static/css/style.css and static/js/script.js-->
   <head>
 
+  <head>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <script src="{% static 'js/script.js' %}" defer></script>
   </head>
 
   <body>
-    <div class="container">
-      <div id="chat-log" class="chat-box" style="padding-left:auto ;">
-      </div>
-      <div class="input-area" style="display: flex; align-items: center;">
-        <input type="textarea" id="chat-message-input" class="form-control" placeholder="Type and Send">
-        <button id="chat-message-submit" class="btn btn-primary">Send</button>
+    <button class="chatbot-toggler">
+      <span class="material-symbols-rounded">mode_comment</span>
+      <span class="material-symbols-outlined">close</span>
+    </button>
+    <div class="chatbot">
+      <header>
+        <h1>epiphane-ai</h1>
+        <span class="close-btn material-symbols-outlined">close</span>
+      </header>
+      <ul class="chatbox" id="chat-log">
+        <!-- Chat messages will be appended here -->
+      </ul>
+      <div class="chat-input">
+        <textarea placeholder="Enter a message..." spellcheck="false" required id="chat-message-input"></textarea>
+        <span id="send-btn" class="material-symbols-rounded">send</span>
       </div>
     </div>
   </body>
+  <script>
+    // Existing WebSocket and chat functionality script
+  </script>
+</html>
     <script>
     var wss_protocol = window.location.protocol == "https:" ? "wss://" : "ws://";
     var chatSocket = new WebSocket(
