@@ -13,6 +13,10 @@ class Publications(TemplateView):
     template_name = "portfolio_epiphane/publications.html"
 
 
+class Chat(TemplateView):
+    template_name = "chat/chat.html"
+
+
 def nlptask(request):
 
     if request.method == "POST":
