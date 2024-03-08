@@ -47,7 +47,6 @@ dj-database-url==2.1.0
 Django==4.1.4
 django-browser-reload==1.12.1
 django-heroku==0.3.1
-django-tailwind==3.4.0
 exceptiongroup==1.2.0
 executing==2.0.1
 gitdb==4.0.11
@@ -103,7 +102,6 @@ pymongo==3.13.0
 pyOpenSSL==24.0.0
 pypandoc==1.12
 python-dateutil==2.7.5
-python-decouple==3.6
 python-dotenv==1.0.1
 python-slugify==8.0.4
 pytz==2024.1
