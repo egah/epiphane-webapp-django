@@ -135,6 +135,8 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 # Configure Django App for Heroku.
 # django_on_heroku.settings(locals())
 
+# pour autoriser les channels
+"""
 CHANNEL_LAYERS = {
     "default": {
         "BACKEND": "channels_redis.core.RedisChannelLayer",
@@ -143,3 +145,4 @@ CHANNEL_LAYERS = {
         },
     },
 }
+"""
