@@ -600,12 +600,17 @@ de caractère.
         <h4 class="publi-title">Postgres multi-agent data analytics
         </h4>
         <p>
-          Dans le cadre de ce projet, j'ai élaboré une API exploitant le point d'achèvement de complétion ChatGPT d'OpenAI pour convertir le langage naturel en une requête SQL et restituer le résultat de la requête. Bien qu'il soit possible d'effectuer directement un appel à l'API OpenAI, les points d'achèvement de ce projet présentent plusieurs avantages :
-
+          Dans ce projet, j’ai créé une API qui fait appel à GPT4, le modèle de langue d'OpenAI pour transformer une requête SQL en langage naturel en code SQL. L'API retourne à la fois le code SQL et  le résultat de la requête. Cette API présente beaucoup d'avantages :
+        
+          
+    
           <ul>
-            <li>Pas besoin de rédiger la requête soi-même</li>
-            <li>L'API intègre des flux de contrôle garantissant la validité de la réponse du modèle de langage</li>
-            <li>Vous êtes informé du coût associé à chaque appel à l'API</li>
+            <li> Pas besoin d’écrire les prompts ChatGPT</li>
+            <li>Vous connaissez le coût de chaque appel à l’API</li>
+            <li>Pas besoin d'exécuter soi-même la requête SQL</li>
+            <li>
+              L’API contient des flux de contrôle qui garantissent que la réponse renvoyée  par le modèle de langue est correcte.
+            </li>
           </ul>    
         </p>
         <p style="font-weight: bold;">
