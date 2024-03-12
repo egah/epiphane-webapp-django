@@ -1,6 +1,8 @@
 import os
 from pathlib import Path
+import dotenv
 
+dotenv.load_dotenv()
 
 # import django_on_heroku
 
@@ -135,13 +137,12 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 # django_on_heroku.settings(locals())
 
 # pour autoriser les channels
-"""
+
 CHANNEL_LAYERS = {
     "default": {
         "BACKEND": "channels_redis.core.RedisChannelLayer",
         "CONFIG": {
-            "hosts": [config("REDIS_BACKEND")],
+            "hosts": [os.environ.get("REDIS_BACKEND")],
         },
     },
 }
-"""
