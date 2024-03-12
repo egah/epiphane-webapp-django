@@ -17,6 +17,10 @@
     <div class="container">
         <div id="chat-log" class="chat-box" style="padding-left:auto ;">
         </div>
+
+        <footer>
+            Powered by
+        </footer>
         
         <!-- code : adapt the input area the be able to write multiline message-->
 
@@ -33,7 +37,7 @@
         <br></br>
 
         <div class="icon-bar input-area">
-            <input type="textarea" id="chat-message-input" class="form-control" placeholder="Type and Send">
+            <textarea id="chat-message-input" class="form-control" placeholder="Type and Send" rows="1"></textarea>
             <button id="chat-message-submit" class="">
                 <img width="48" height="48" src="https://img.icons8.com/color/48/up--v1.png" alt="Up Arrow" class="icon">
             </button>
@@ -61,13 +65,15 @@
 
             var str = '<div class="space-y-2">';
             messages.forEach(function (msg) {
-                str += `<p class="flex ${msg.source == "bot" ? "justify-start" : "justify-end"}">
+                str += `<p class="flex ${msg.source == "bot" ? "justify-start bot-message" : "justify-end user-message"}">
+                            <img src="${msg.source == "bot" ? "bot-icon-url" : "user-icon-url"}" class="message-icon">
                             <div class="chat-bubble ${msg.source == "bot" ? "bot" : "user"}">${msg.msg}</div>
                         </p>`;
             });
             str += "</div>";
             document.querySelector(".chat-box").innerHTML = str;
 
+            var chatBox = document.querySelector(".chat-box");
                     
             chatBox.scrollTop = chatBox.scrollHeight;
 
