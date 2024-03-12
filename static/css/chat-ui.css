@@ -43,18 +43,18 @@ body {
     transform: translateX(-50%);
     padding: 10px;
     height: fit-content;
-    width: 50%; /* Increased width */
+    width: 40%; /* Adjusted width for better responsiveness */
     display: flex;
     align-items: center;
     background-color: white;
-    border-radius: 20px; /* Increased border radius */
+    border-radius: 20px;
     resize: vertical; /* Allow text to go multiple lines */
 }
 
 #chat-message-input {
     flex-grow: 1;
     margin-right: 10px;
-    resize: vertical; /* Allow text to go multiple lines */
+    resize: none; /* Changed to none */
     border-radius: 20px; /* Increased border radius */
     padding: 10px;
     background-color: transparent;
@@ -77,6 +77,32 @@ body {
     display: block;
 }
 
+/* Added styles for message icons */
+.message-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+}
+
+.user .message-icon {
+    display: none; /* Hide user icon by default */
+}
+
+.bot .message-icon {
+    display: inline; /* Show bot icon */
+}
+
+/* Added styles for the footer */
+footer {
+    text-align: center;
+    padding: 5px 0;
+    font-size: 0.8em;
+    color: black;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: white;
+}
 #title {
     text-align: center;
     font-size: 2em;

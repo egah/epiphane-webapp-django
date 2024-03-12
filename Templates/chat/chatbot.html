@@ -18,19 +18,12 @@
         <div id="chat-log" class="chat-box" style="padding-left:auto ;">
         </div>
 
-        <footer>
-            Powered by
-        </footer>
+     
         
-        <!-- code : adapt the input area the be able to write multiline message-->
 
-        <!--add a bot icon in frontof all boot message-->
 
-        <!--add an icon in front of all user message-->
 
-        <!--avoid the div.chat-box to confuse with the div>.input-area when the chat start to be long-->
 
-        <!--add a footer that says powered by in the bootm of the chat -->
 
         <br></br>
         <br></br>
@@ -42,10 +35,13 @@
                 <img width="48" height="48" src="https://img.icons8.com/color/48/up--v1.png" alt="Up Arrow" class="icon">
             </button>
         
+           
         </div>
-       
 
     </div>
+    <footer>
+        Powered by <a href="https://www.linkedin.com/in/egahepiphane/" target="_blank"> Egah Epiphane</a>
+    </footer>
     
 
 
@@ -66,7 +62,7 @@
             var str = '<div class="space-y-2">';
             messages.forEach(function (msg) {
                 str += `<p class="flex ${msg.source == "bot" ? "justify-start bot-message" : "justify-end user-message"}">
-                            <img src="${msg.source == "bot" ? "bot-icon-url" : "user-icon-url"}" class="message-icon">
+                            <img src="${msg.source == "bot" ? "https://img.icons8.com/stickers/100/bot.png" : "{% static 'Images/user.png' %}"}" class="message-icon">
                             <div class="chat-bubble ${msg.source == "bot" ? "bot" : "user"}">${msg.msg}</div>
                         </p>`;
             });
