@@ -18,4 +18,4 @@ STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 django_heroku.settings(locals())
 
-ALLOWED_HOSTS = ["epiphane-app-django-abd9746eda9b.herokuapp.com"]
+ALLOWED_HOSTS = ["epiphane-app-django-abd9746eda9b.herokuapp.com", "www.epiphane-egah.fr"]
